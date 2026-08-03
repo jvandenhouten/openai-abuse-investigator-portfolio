@@ -1,0 +1,52 @@
+action_id,case_id,account_id,event_id,report_source,triage_minutes,action_type,rationale,reviewer,action_timestamp,human_validated
+ACT-00001,C-001,A-0001,EVT-0000003,user_report,9,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-02T08:00:00+00:00,Yes
+ACT-00002,C-001,A-0002,EVT-0000126,automated_signal,15,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-02T09:00:00+00:00,Yes
+ACT-00003,C-001,A-0002,EVT-0000068,analyst_lead,15,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-02T10:00:00+00:00,Yes
+ACT-00004,C-002,A-0021,EVT-0000231,analyst_lead,31,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-04T08:00:00+00:00,Yes
+ACT-00005,C-002,A-0019,EVT-0000235,automated_signal,32,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-04T09:00:00+00:00,Yes
+ACT-00006,C-002,A-0021,EVT-0000537,automated_signal,50,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-04T10:00:00+00:00,Yes
+ACT-00007,C-002,A-0019,EVT-0000250,user_report,33,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-04T11:00:00+00:00,Yes
+ACT-00008,C-002,A-0025,EVT-0000482,automated_signal,14,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-04T12:00:00+00:00,Yes
+ACT-00009,C-002,A-0016,EVT-0000380,partner_escalation,28,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-04T13:00:00+00:00,Yes
+ACT-00010,C-003,A-0027,EVT-0000545,analyst_lead,16,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-06T08:00:00+00:00,Yes
+ACT-00011,C-003,A-0028,EVT-0000681,partner_escalation,44,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-06T09:00:00+00:00,Yes
+ACT-00012,C-003,A-0035,EVT-0000773,analyst_lead,19,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-06T10:00:00+00:00,Yes
+ACT-00013,C-004,A-0038,EVT-0000934,automated_signal,19,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-08T08:00:00+00:00,Yes
+ACT-00014,C-004,A-0036,EVT-0001013,user_report,16,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-08T09:00:00+00:00,Yes
+ACT-00015,C-004,A-0038,EVT-0001030,user_report,10,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-08T10:00:00+00:00,Yes
+ACT-00016,C-004,A-0044,EVT-0000866,analyst_lead,12,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-08T11:00:00+00:00,Yes
+ACT-00017,C-005,A-0057,EVT-0001211,user_report,8,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T08:00:00+00:00,Yes
+ACT-00018,C-005,A-0055,EVT-0001377,analyst_lead,10,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T09:00:00+00:00,Yes
+ACT-00019,C-005,A-0057,EVT-0001085,automated_signal,12,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T10:00:00+00:00,Yes
+ACT-00020,C-005,A-0054,EVT-0001247,user_report,20,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T11:00:00+00:00,Yes
+ACT-00021,C-005,A-0053,EVT-0001120,analyst_lead,10,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T12:00:00+00:00,Yes
+ACT-00022,C-005,A-0062,EVT-0001151,partner_escalation,18,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T13:00:00+00:00,Yes
+ACT-00023,C-005,A-0049,EVT-0001159,analyst_lead,16,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T14:00:00+00:00,Yes
+ACT-00024,C-005,A-0068,EVT-0001116,user_report,12,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-10T15:00:00+00:00,Yes
+ACT-00025,C-006,A-0073,EVT-0001580,partner_escalation,33,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-12T08:00:00+00:00,Yes
+ACT-00026,C-006,A-0077,EVT-0001624,partner_escalation,32,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-12T09:00:00+00:00,Yes
+ACT-00027,C-006,A-0080,EVT-0001524,user_report,23,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-12T10:00:00+00:00,Yes
+ACT-00028,C-006,A-0081,EVT-0001636,analyst_lead,29,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-12T11:00:00+00:00,Yes
+ACT-00029,C-006,A-0081,EVT-0001516,partner_escalation,16,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-12T12:00:00+00:00,Yes
+ACT-00030,C-007,A-0097,EVT-0001875,partner_escalation,16,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-14T08:00:00+00:00,Yes
+ACT-00031,C-007,A-0094,EVT-0001887,user_report,16,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-14T09:00:00+00:00,Yes
+ACT-00032,C-007,A-0092,EVT-0001930,analyst_lead,7,Mixed Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-14T10:00:00+00:00,Yes
+ACT-00033,C-008,A-0111,EVT-0002152,user_report,37,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-16T08:00:00+00:00,Yes
+ACT-00034,C-008,A-0105,EVT-0002221,analyst_lead,29,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-16T09:00:00+00:00,Yes
+ACT-00035,C-008,A-0101,EVT-0002212,automated_signal,39,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-16T10:00:00+00:00,Yes
+ACT-00036,C-008,A-0102,EVT-0002204,automated_signal,32,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-16T11:00:00+00:00,Yes
+ACT-00037,C-009,A-0120,EVT-0002540,automated_signal,50,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T08:00:00+00:00,Yes
+ACT-00038,C-009,A-0119,EVT-0002500,analyst_lead,24,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T09:00:00+00:00,Yes
+ACT-00039,C-009,A-0130,EVT-0002402,automated_signal,29,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T10:00:00+00:00,Yes
+ACT-00040,C-009,A-0125,EVT-0002638,analyst_lead,15,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T11:00:00+00:00,Yes
+ACT-00041,C-009,A-0121,EVT-0002349,partner_escalation,12,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T12:00:00+00:00,Yes
+ACT-00042,C-009,A-0112,EVT-0002677,analyst_lead,19,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T13:00:00+00:00,Yes
+ACT-00043,C-009,A-0133,EVT-0002400,automated_signal,31,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T14:00:00+00:00,Yes
+ACT-00044,C-009,A-0133,EVT-0002355,automated_signal,35,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T15:00:00+00:00,Yes
+ACT-00045,C-009,A-0130,EVT-0002282,automated_signal,37,Restriction and Escalation,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-18T16:00:00+00:00,Yes
+ACT-00046,C-010,A-0158,EVT-0002788,automated_signal,21,No Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-20T08:00:00+00:00,Yes
+ACT-00047,C-010,A-0148,EVT-0002867,partner_escalation,21,No Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-20T09:00:00+00:00,Yes
+ACT-00048,C-010,A-0157,EVT-0002899,user_report,42,No Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-20T10:00:00+00:00,Yes
+ACT-00049,C-010,A-0143,EVT-0002762,user_report,32,No Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-20T11:00:00+00:00,Yes
+ACT-00050,C-010,A-0141,EVT-0002740,partner_escalation,29,No Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-20T12:00:00+00:00,Yes
+ACT-00051,C-010,A-0157,EVT-0002852,analyst_lead,46,No Action,Synthetic ground-truth guided decision with human review,Analyst-Synthetic,2026-07-20T13:00:00+00:00,Yes

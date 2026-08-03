@@ -1,0 +1,28 @@
+target_id,case_id,target_type,target_name,geo_region,event_date,sensitivity
+TGT-001,C-001,Venue,Riverton Civic Center,US-West,2026-07-13,High
+TGT-002,C-002,Person,Northgate Reporter,US-Northeast,,High
+TGT-003,C-003,Platform Process,Prior Enforcement Cluster,Global,,Medium
+TGT-004,C-003,Person,Fictional Moderator Alias,Global,,High
+TGT-005,C-004,User Cohort,At-Risk Youth Cohort,Global,,Medium
+TGT-006,C-004,External Channel,Fictional Off-Platform Channel A,Global,,Medium
+TGT-007,C-004,External Channel,Fictional Off-Platform Channel B,Global,,Medium
+TGT-008,C-005,Event,Harbor Square Demonstration,US-West,2026-07-21,Medium
+TGT-009,C-005,Venue,Harbor Square Transit Hub,US-West,2026-07-21,High
+TGT-010,C-006,Institution,Riverton Emergency Dispatch,US-West,,High
+TGT-011,C-006,Institution,Lakeside Public Safety Center,US-South,,High
+TGT-012,C-006,Institution,Northgate Emergency Desk,US-Northeast,,High
+TGT-013,C-007,School,Northgate High School,US-Northeast,2026-07-25,High
+TGT-014,C-007,School,Lakeside Academy,US-South,2026-07-25,High
+TGT-015,C-007,School,Harborview School,US-West,2026-07-25,High
+TGT-016,C-007,School,Riverton Prep,US-West,2026-07-25,High
+TGT-017,C-007,School,Pine Ridge School,US-Midwest,2026-07-25,High
+TGT-018,C-007,School,Easton School,US-Northeast,2026-07-25,High
+TGT-019,C-007,School,Cedar Valley School,US-Midwest,2026-07-25,High
+TGT-020,C-007,School,Sunfield School,US-South,2026-07-25,High
+TGT-021,C-008,Person,Fictional Public Advocate,US-Northeast,,High
+TGT-022,C-009,Person,Fictional Public Figure A,US-West,,High
+TGT-023,C-009,Person,Fictional Public Figure B,US-Northeast,,High
+TGT-024,C-009,Person,Fictional Public Figure C,EU-West,,High
+TGT-025,C-009,Person,Fictional Public Figure D,APAC,,High
+TGT-026,C-009,Person,Fictional Public Figure E,US-South,,High
+TGT-027,C-010,Event,Riverton Mutual-Aid Distribution,US-West,2026-07-31,Medium

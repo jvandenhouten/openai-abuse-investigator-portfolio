@@ -1,0 +1,52 @@
+device_id,device_family,first_seen_case,risk_note
+DEV-X01,shared_synthetic,C-001,Designed cross-case linkage
+DEV-X02,shared_synthetic,C-001,Designed cross-case linkage
+DEV-X03,shared_synthetic,C-002,Designed cross-case linkage
+DEV-X04,shared_synthetic,C-002,Designed cross-case linkage
+DEV-X05,shared_synthetic,C-003,Designed cross-case linkage
+DEV-X06,shared_synthetic,C-003,Designed cross-case linkage
+DEV-X07,shared_synthetic,C-004,Designed cross-case linkage
+DEV-X08,shared_synthetic,C-006,Designed cross-case linkage
+DEV-X09,shared_synthetic,C-007,Designed cross-case linkage
+DEV-X10,shared_synthetic,C-008,Designed cross-case linkage
+DEV-B01,shared_synthetic,C-010,Designed cross-case linkage
+DEV-B02,shared_synthetic,C-010,Designed cross-case linkage
+DEV-001,emulator,C-001,
+DEV-002,mobile,C-001,
+DEV-003,desktop,C-001,
+DEV-004,mobile,C-002,
+DEV-005,desktop,C-002,
+DEV-006,mobile,C-002,
+DEV-007,tablet,C-002,
+DEV-008,emulator,C-003,
+DEV-009,desktop,C-003,
+DEV-010,mobile,C-003,
+DEV-011,desktop,C-004,
+DEV-012,desktop,C-004,
+DEV-013,tablet,C-004,
+DEV-014,desktop,C-005,
+DEV-015,emulator,C-005,
+DEV-016,tablet,C-005,
+DEV-017,emulator,C-005,
+DEV-018,emulator,C-005,
+DEV-019,emulator,C-005,
+DEV-020,mobile,C-006,
+DEV-021,desktop,C-006,
+DEV-022,tablet,C-006,
+DEV-023,tablet,C-007,
+DEV-024,desktop,C-007,
+DEV-025,mobile,C-007,
+DEV-026,tablet,C-008,
+DEV-027,desktop,C-008,
+DEV-028,emulator,C-008,
+DEV-029,mobile,C-009,
+DEV-030,desktop,C-009,
+DEV-031,tablet,C-009,
+DEV-032,emulator,C-009,
+DEV-033,mobile,C-009,
+DEV-034,tablet,C-009,
+DEV-035,tablet,C-010,
+DEV-036,mobile,C-010,
+DEV-037,tablet,C-010,
+DEV-038,desktop,C-010,
+DEV-039,desktop,C-010,

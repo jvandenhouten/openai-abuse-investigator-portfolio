@@ -1,0 +1,16 @@
+link_id,case_id_a,case_id_b,link_type,strength,evidence_count,analyst_confidence
+CL-001,C-001,C-005,shared_target_context,0.72,4,Medium
+CL-002,C-001,C-007,template_similarity,0.83,6,High
+CL-003,C-001,C-009,shared_infrastructure,0.79,7,High
+CL-004,C-002,C-008,shared_targeting_method,0.76,5,High
+CL-005,C-002,C-009,shared_content_and_roles,0.88,9,High
+CL-006,C-002,C-010,false_positive_comparison,0.42,3,Medium
+CL-007,C-003,C-004,shared_migration_behavior,0.63,4,Medium
+CL-008,C-003,C-006,shared_infrastructure,0.74,6,Medium
+CL-009,C-003,C-009,post_enforcement_evasion,0.91,11,High
+CL-010,C-004,C-005,coded_language_and_event_context,0.57,4,Medium
+CL-011,C-004,C-006,role_differentiation,0.61,4,Medium
+CL-012,C-005,C-010,contextual_false_positive_control,0.55,5,Medium
+CL-013,C-006,C-007,copycat_and_hoax_overlap,0.66,5,Medium
+CL-014,C-007,C-009,template_and_infrastructure,0.85,8,High
+CL-015,C-008,C-009,evasion_and_role_network,0.87,9,High
