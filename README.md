@@ -9,6 +9,9 @@ coordinated abuse, enforcement evasion, extremist activity, and false positives.
 > **Important:** All cases, users, targets, devices, infrastructure, content, and events in this repository
 > are fictional and synthetically generated. This project is not affiliated with or endorsed by OpenAI.
 > It contains no real user information and no operationally useful harmful instructions.
+## Live Interactive Dashboard
+
+[Open the Abuse Investigation & Detection Dashboard](https://joel-abuse-investigation-portfolio.streamlit.app)
 
 ## Project Status
 
