@@ -159,7 +159,7 @@ case_links["strength"] = pd.to_numeric(case_links["strength"], errors="coerce")
 case_links["evidence_count"] = pd.to_numeric(case_links["evidence_count"], errors="coerce")
 
 tabs = st.tabs(
-    ["Executive Overview", "Case Explorer", "Cross-Case Network", "SQL Findings", "Methodology"]
+    ["Executive Overview", "Case Explorer", "Cross-Case Network", "C-009 Deep Dive", "SQL Findings", "Methodology"]
 )
 
 with tabs[0]:
@@ -336,7 +336,195 @@ with tabs[2]:
         hide_index=True,
     )
 
+
 with tabs[3]:
+    st.markdown("## C-009: Cross-Regional Harassment Network Using Shared Infrastructure")
+    st.caption(
+        "Synthetic deep-dive investigation. All users, targets, devices, content, and events are fictional."
+    )
+
+    c009_events = events.loc[events["case_id"] == "C-009"].copy()
+    c009_actions = actions.loc[actions["case_id"] == "C-009"].copy()
+    c009_case_links = case_links.loc[
+        (case_links["case_id_a"] == "C-009") | (case_links["case_id_b"] == "C-009")
+    ].copy()
+
+    c009_cross_accounts = run_query(
+        """
+        SELECT ca.account_id,
+               GROUP_CONCAT(DISTINCT ca.case_id) AS cases,
+               COUNT(DISTINCT ca.case_id) AS case_count,
+               a.role,
+               a.prior_enforcement,
+               a.risk_tier
+        FROM case_accounts ca
+        JOIN accounts a ON a.account_id=ca.account_id
+        WHERE ca.account_id IN (
+            SELECT account_id FROM case_accounts WHERE case_id='C-009'
+        )
+        GROUP BY ca.account_id, a.role, a.prior_enforcement, a.risk_tier
+        HAVING COUNT(DISTINCT ca.case_id)>1
+        ORDER BY ca.account_id
+        """
+    )
+
+    c009_devices = run_query(
+        """
+        SELECT s.device_id,
+               COUNT(DISTINCT e.case_id) AS case_count,
+               GROUP_CONCAT(DISTINCT e.case_id) AS cases,
+               COUNT(DISTINCT s.account_id) AS account_count
+        FROM sessions s
+        JOIN events e ON e.session_id=s.session_id
+        WHERE s.device_id IN (
+            SELECT DISTINCT s2.device_id
+            FROM sessions s2
+            JOIN case_accounts ca ON ca.account_id=s2.account_id
+            WHERE ca.case_id='C-009'
+        )
+        GROUP BY s.device_id
+        HAVING COUNT(DISTINCT e.case_id)>1
+        ORDER BY case_count DESC, account_count DESC
+        """
+    )
+
+    c009_hashes = run_query(
+        """
+        SELECT c.content_hash,
+               COUNT(DISTINCT c.case_id) AS case_count,
+               GROUP_CONCAT(DISTINCT c.case_id) AS cases,
+               COUNT(*) AS content_count
+        FROM content c
+        WHERE c.content_hash IN (
+            SELECT content_hash FROM content WHERE case_id='C-009'
+        )
+        GROUP BY c.content_hash
+        HAVING COUNT(DISTINCT c.case_id)>1
+        ORDER BY case_count DESC, content_count DESC
+        """
+    )
+
+    m1, m2, m3, m4, m5 = st.columns(5)
+    m1.metric("Primary Accounts", 27)
+    m2.metric("Events", len(c009_events))
+    m3.metric("Cross-Case Accounts", len(c009_cross_accounts))
+    m4.metric("Shared Cross-Case Devices", len(c009_devices))
+    m5.metric("Direct Case Links", len(c009_case_links))
+
+    st.markdown(
+        """
+        <div class="notice">
+        <b>High-confidence portfolio assessment:</b> the converging synthetic evidence is more consistent
+        with a coordinated network than unrelated parallel activity. Shared infrastructure or content
+        similarity alone would not support this conclusion; the assessment depends on multiple independent
+        linkage categories and human contextual review.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    left, right = st.columns([1.15, 1])
+    with left:
+        role_summary = run_query(
+            """
+            SELECT a.role,
+                   COUNT(*) AS event_count,
+                   ROUND(AVG(CAST(e.raw_risk_score AS REAL)),3) AS avg_risk,
+                   COUNT(DISTINCT e.account_id) AS account_count
+            FROM events e
+            JOIN accounts a ON a.account_id=e.account_id
+            WHERE e.case_id='C-009'
+            GROUP BY a.role
+            ORDER BY event_count DESC
+            """
+        )
+        role_fig = px.bar(
+            role_summary,
+            x="event_count",
+            y="role",
+            orientation="h",
+            title="Event Volume by Synthetic Network Role",
+            labels={"event_count": "Events", "role": "Role"},
+        )
+        role_fig.update_traces(marker_color=NAVY)
+        st.plotly_chart(role_fig, use_container_width=True)
+
+    with right:
+        timeline_c009 = (
+            c009_events.assign(
+                timestamp=pd.to_datetime(c009_events["timestamp"], utc=True, errors="coerce")
+            )
+            .dropna(subset=["timestamp"])
+            .set_index("timestamp")
+            .resample("3h")
+            .size()
+            .reset_index(name="events")
+        )
+        timeline_fig = px.line(
+            timeline_c009,
+            x="timestamp",
+            y="events",
+            markers=True,
+            title="Activity Timeline - Three-Hour Buckets",
+        )
+        timeline_fig.update_traces(line_color=NAVY, marker_color=GOLD)
+        st.plotly_chart(timeline_fig, use_container_width=True)
+
+    st.markdown("### Cross-Case Accounts")
+    st.dataframe(c009_cross_accounts, use_container_width=True, hide_index=True)
+
+    st.markdown("### Shared Devices Across Investigations")
+    st.dataframe(c009_devices, use_container_width=True, hide_index=True)
+
+    st.markdown("### Direct Case Relationships")
+    display_links = c009_case_links.copy()
+    display_links["linked_case"] = display_links.apply(
+        lambda row: row["case_id_b"] if row["case_id_a"] == "C-009" else row["case_id_a"],
+        axis=1,
+    )
+    st.dataframe(
+        display_links[
+            ["linked_case", "link_type", "strength", "evidence_count", "analyst_confidence"]
+        ].sort_values("strength", ascending=False),
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    with st.expander("Competing hypotheses and limitations"):
+        st.markdown(
+            """
+            **H1 - Coordinated network:** supported by cross-case accounts, shared devices,
+            repeated content families, post-enforcement status, and differentiated roles.
+
+            **H2 - Coincidental parallel behavior:** possible for isolated similarities but
+            less persuasive when independent linkage categories converge.
+
+            **H3 - Shared legitimate environment:** could explain some device or network overlap;
+            the synthetic record contains no corroborating benign context.
+
+            **H4 - Detection artifact:** generated content families can inflate similarity;
+            content recurrence is treated as corroboration rather than the sole basis for action.
+
+            **Limitations:** synthetic ground truth, placeholder content, synthetic risk scores,
+            and intentionally discoverable relationships. Human review remains mandatory.
+            """
+        )
+
+    st.markdown("### Recommended Investigative Actions")
+    st.markdown(
+        """
+        1. Treat C-009 and its five linked cases as a coordinated investigative cluster.
+        2. Preserve account, device, session, content-family, target, and enforcement-link evidence.
+        3. Prioritize previously enforced accounts and controller roles for contextual human review.
+        4. Build reusable detection features for cross-case membership, infrastructure overlap,
+           template recurrence, role differentiation, and post-enforcement reappearance.
+        5. Require analyst validation when infrastructure or content similarity is the only link.
+        6. Evaluate false positives against C-010 and mixed-ground-truth cases C-005 and C-007.
+        """
+    )
+
+
+with tabs[4]:
     query_options = {
         "Cross-case accounts": """
             SELECT account_id,
@@ -400,7 +588,7 @@ with tabs[3]:
         "The SQL result is an investigative lead. It requires contextual review before any conclusion or action."
     )
 
-with tabs[4]:
+with tabs[5]:
     st.markdown(
         """
         ## Analytical Method

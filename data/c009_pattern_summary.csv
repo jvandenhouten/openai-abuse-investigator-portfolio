@@ -1,0 +1,8 @@
+pattern_id,event_count,avg_risk,pattern_name
+Unclassified / Noise,119,0.683,Unclassified / Background Activity
+P06,60,0.706,Post-Enforcement Evasion
+P01,57,0.684,Shared Infrastructure
+P04,56,0.707,Template / Phrase Reuse
+P12,55,0.703,Language Obfuscation
+P03,52,0.697,Repeated Target Focus
+P08,51,0.733,Functional Role Differentiation

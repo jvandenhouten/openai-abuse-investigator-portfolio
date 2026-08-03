@@ -1,0 +1,7 @@
+evidence_dimension,observed,benchmark,normalized_score
+Five accounts appear in C-009 and another investigation,5,5,1.0
+Four synthetic devices connect C-009 to other cases,4,4,1.0
+Eighteen content hashes recur outside C-009,18,15,1.0
+Five high-confidence case links,5,5,1.0
+Four distinct operational roles,4,4,1.0
+Post-enforcement accounts present,6,5,1.0

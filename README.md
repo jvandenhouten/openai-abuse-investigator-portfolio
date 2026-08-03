@@ -9,13 +9,14 @@ coordinated abuse, enforcement evasion, extremist activity, and false positives.
 > **Important:** All cases, users, targets, devices, infrastructure, content, and events in this repository
 > are fictional and synthetically generated. This project is not affiliated with or endorsed by OpenAI.
 > It contains no real user information and no operationally useful harmful instructions.
+
 ## Live Interactive Dashboard
 
 [Open the Abuse Investigation & Detection Dashboard](https://joel-abuse-investigation-portfolio.streamlit.app)
 
 ## Project Status
 
-**Phase 2 complete — synthetic relational dataset and initial SQL investigation pack**
+**Phase 3 in progress - C-009 deep-dive investigation completed**
 
 Current repository components:
 
@@ -28,13 +29,40 @@ Current repository components:
 - 15 case-to-case links
 - 136 account-to-account links
 - SQLite database and CSV exports
-- Initial SQL investigation queries
-- Streamlit case explorer
+- SQL investigation pack
+- Streamlit case explorer and C-009 deep dive
+- Python C-009 analysis script and notebook
+- C-009 investigative case brief
 - Documented safety, privacy, and human-review principles
 
-## Investigative Questions
+## Featured Investigation: C-009
 
-The portfolio is designed to answer questions such as:
+**Cross-Regional Harassment Network Using Shared Infrastructure**
+
+C-009 demonstrates cross-case entity resolution, shared-device analysis, repeated-content detection,
+post-enforcement assessment, role differentiation, timeline analysis, competing hypotheses, and
+confidence-rated recommendations.
+
+Key synthetic findings:
+
+- 27 primary accounts and 450 events
+- 5 accounts linked to another case
+- 4 devices connecting C-009 to other cases
+- 18 content hashes reused beyond C-009
+- 5 direct high-confidence case relationships
+- 4 differentiated network roles
+
+Files:
+
+- `case_briefs/C-009_Case_Brief.md`
+- `case_briefs/C-009_Case_Brief.pdf`
+- `notebooks/C009_investigation_analysis.ipynb`
+- `scripts/analyze_c009.py`
+- `sql/C009_investigation_queries.sql`
+- `assets/c009_case_network.png`
+- `assets/c009_activity_timeline.png`
+
+## Investigative Questions
 
 1. Which apparently separate cases share accounts, devices, network infrastructure, targets, or content templates?
 2. Which clusters show synchronized or burst activity?
@@ -48,17 +76,17 @@ The portfolio is designed to answer questions such as:
 
 ```text
 .
-├── app.py                         # Streamlit portfolio application
-├── requirements.txt              # Python dependencies
-├── assets/                       # Portfolio images
-├── case_briefs/                  # Case reports as they are completed
-├── data/                         # Synthetic CSV tables
-├── database/                     # SQLite database
-├── docs/                         # Methodology, ethics, and governance
-├── notebooks/                    # Python analysis notebooks
-├── reports/                      # Executive and technical reports
-├── scripts/                      # Dataset validation and utilities
-└── sql/                          # Investigation queries
+├── app.py
+├── requirements.txt
+├── assets/
+├── case_briefs/
+├── data/
+├── database/
+├── docs/
+├── notebooks/
+├── reports/
+├── scripts/
+└── sql/
 ```
 
 ## Run the Dashboard Locally
@@ -70,18 +98,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-On macOS or Linux:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py
-```
-
 ## Use the SQLite Database
-
-The database can be opened in DB Browser for SQLite or queried directly:
 
 ```bash
 sqlite3 database/openai_abuse_investigator_synthetic.sqlite
@@ -97,14 +114,14 @@ ORDER BY case_id;
 
 ## Analytical Standards
 
-Every case product will distinguish among:
+Every case product distinguishes among:
 
 - observed facts
 - derived indicators
 - analytical judgments
 - alternative explanations
 - confidence assessments
-- recommended actions
+- recommended action
 - limitations and collection gaps
 
 Automation supports triage and pattern discovery; it does not replace accountable human judgment.
@@ -115,9 +132,11 @@ Automation supports triage and pattern discovery; it does not replace accountabl
 - [x] Synthetic relational dataset
 - [x] Initial SQL investigation pack
 - [x] Interactive case explorer
-- [ ] Python feature-engineering notebook
-- [ ] Cross-case network graph and entity-resolution model
-- [ ] Ten investigative case briefs
+- [x] C-009 Python and SQL deep-dive analysis
+- [x] C-009 investigative case brief
+- [ ] Complete Python feature-engineering notebook
+- [ ] Portfolio-wide cross-case network model
+- [ ] Remaining nine investigative case briefs
 - [ ] Detection methodology and evaluation report
 - [ ] Executive intelligence report
 - [ ] Public portfolio website
@@ -126,6 +145,6 @@ Automation supports triage and pattern discovery; it does not replace accountabl
 
 **Joel L. Vandenhouten**  
 Retired U.S. Army Major | Intelligence, Investigations, Corporate Security, Crisis Operations  
-Texas A&M University School of Law — Master of Legal Studies candidate, Cybersecurity Law & Policy
+Texas A&M University School of Law - Master of Legal Studies candidate, Cybersecurity Law & Policy
 
 This project is an independent professional portfolio using wholly synthetic data.

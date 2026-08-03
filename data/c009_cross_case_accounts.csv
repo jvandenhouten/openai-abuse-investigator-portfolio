@@ -1,0 +1,6 @@
+account_id,cases,case_count,role,prior_enforcement,risk_tier
+A-0112,"C-009,C-001",2,controller,Yes,High
+A-0113,"C-009,C-002",2,replacement_account,Yes,High
+A-0114,"C-009,C-003",2,amplifier,Yes,High
+A-0115,"C-009,C-007",2,amplifier,Yes,High
+A-0116,"C-009,C-008",2,controller,Yes,High

@@ -1,0 +1,6 @@
+link_id,case_id_a,case_id_b,link_type,strength,evidence_count,analyst_confidence
+CL-009,C-003,C-009,post_enforcement_evasion,0.91,11,High
+CL-005,C-002,C-009,shared_content_and_roles,0.88,9,High
+CL-015,C-008,C-009,evasion_and_role_network,0.87,9,High
+CL-014,C-007,C-009,template_and_infrastructure,0.85,8,High
+CL-003,C-001,C-009,shared_infrastructure,0.79,7,High
